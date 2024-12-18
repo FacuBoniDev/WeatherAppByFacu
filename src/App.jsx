@@ -36,7 +36,7 @@ function App() {
   const ApiCallTime = async () => {
     if (data && data.coord) {
       const API_KEY_TIME = "G3FHN7R7IX8S";
-      const API_URL_TIME = `https://api.timezonedb.com/v2.1/get-time-zone?key=${API_KEY_TIME}&format=json&by=position&lat=${data.coord.lat}&lng=${data.coord.lon}`;
+      const API_URL_TIME = `http://api.timezonedb.com/v2.1/get-time-zone?key=${API_KEY_TIME}&format=json&by=position&lat=${data.coord.lat}&lng=${data.coord.lon}`;
 
       try {
         const responseTime = await fetch(API_URL_TIME);
