@@ -1,0 +1,40 @@
+form{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.input{
+    width: 30rem;
+    padding: 1rem;
+    border: solid 2px transparent;
+    border-radius: 10px;
+    background-color: rgb(30, 30, 30);
+    color: rgb(199, 195, 195);
+    font-size: 1.2rem;
+    &:focus{
+        border: solid 2px rgba(1, 247, 247, 0.856);
+        outline: none;
+    }
+}
+
+.button{
+    width: 8rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: .9rem;
+    border-radius: 10px;
+    background-color: rgba(1, 247, 247, 0.856);
+    color: rgb(70, 66, 66);
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+    &:hover{
+        transform: scale(1.05);
+        background-color: rgba(35, 255, 255, 0.952) ;
+    }
+}

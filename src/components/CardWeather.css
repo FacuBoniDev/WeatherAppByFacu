@@ -1,0 +1,188 @@
+.cardContainer{
+    height: 20rem;
+    width: 55rem;
+    margin-top: 8rem;
+    color:antiquewhite;
+    background-color: rgb(30, 30, 30);
+    border-radius: 2rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 0 10px 5px rgba(1, 247, 247, 0.856);
+    transition: transform .4s ease-in-out, box-shadow .5s ease-in-out, rotate  2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.cardContainer:hover{
+    transform: scale(1.05) translateY(-1.2rem);
+    box-shadow: 0 0 14px 10px rgba(1, 247, 247, 0.856);
+}
+
+.dataImportante{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-family: "Merienda", Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    color: rgba(21, 241, 230, 0.966);
+}
+
+h2{
+    margin-top: 5rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem
+}
+
+.temperatura{
+    font-size: 4.5rem;
+}
+
+.dataNoImportante{
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    justify-self: flex-end;
+    gap: 1rem;
+    color: rgb(212, 211, 209);
+}
+
+.temperaturaContainer{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 350px;
+}
+
+.cambiarGrados{
+    position: absolute;
+    top: 30%;
+    right: 14%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: .8rem;
+    font-weight: 700;
+    padding: .4rem;
+    border-radius: 10px;
+    background-color: rgba(1, 247, 247, 0.856);
+    color: rgb(235, 227, 227);
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    &:hover{
+        transform: scale(1.15);
+        background-color: rgba(15, 230, 230, 0.856);
+    }
+}
+
+.horario{
+    color: aliceblue;
+    margin-bottom: 2.5rem;
+    font-size: 1.8rem;
+    font-family: "Wallpoet", sans-serif;
+    margin-left: 3rem;
+    font-weight: 400;
+}
+
+.solDia{
+    position: absolute;
+    top: -5%;
+    right: -2%;
+    font-size: 5rem;
+    color: rgb(240, 177, 6);
+    transition: transform 1s ease-in-out;
+}
+
+.nubeDia{
+    position: absolute;
+    top: -2%;
+    right: 4%;
+    font-size: 3.5rem;
+    transition: transform .8s ease-in-out;
+}
+
+.nubeDia:hover{
+    transform: scale(1.1);
+}
+
+.solDia:hover{
+
+    animation: girar 5s linear infinite;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg); /* Punto inicial */
+    }
+    to {    
+        transform: scale(1.1);
+        transform: rotate(360deg); /* Gira 360 grados */
+    }
+}
+
+.estrellaNoche1{
+    position: absolute;
+    top: 1%;
+    right: 0%;
+    color:rgb(243, 229, 148);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.estrellaNoche1:hover, .estrellaNoche2:hover, .estrellaNoche3:hover {
+    transform: scale(1.2);
+    filter: brightness(2);
+}
+
+.estrellaNoche2{
+    position: absolute;
+    top: 5%;
+    right: 11%;
+    color:rgb(243, 229, 148);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.estrellaNoche3{
+    position: absolute;
+    top: -1%;
+    right: 6.5%;
+    color:rgb(243, 229, 148);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.lunita {
+    position: absolute;
+    top: 7%;
+    right: 4.2%;
+    font-size: 2.2rem;
+    color: rgb(218, 214, 214); 
+    transition: transform 0.3s ease, color 0.3s ease, filter 0.3s ease; 
+}
+
+.lunita:hover {
+    transform: scale(1.2); 
+    color: rgb(255, 255, 255); 
+    filter: brightness(1.8); 
+    animation: rotar 1s ease-in-out infinite; 
+}
+
+@keyframes rotar {
+    0% {
+    transform: rotate(-5deg) scale(1.1); 
+    }
+    50% {
+    transform: rotate(5deg) scale(1.1); 
+    }
+    100% {
+    transform: rotate(-5deg) scale(1.1);
+    }
+}

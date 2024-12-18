@@ -1,0 +1,25 @@
+.titulo{
+    position: absolute;
+    color: wheat;
+    left: 5%;
+    top: 5%;    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: rgba(21, 241, 230, 0.966);
+    font-weight: 800;
+    cursor: default;
+}
+
+.github{
+    font-size: 2rem;
+    color: rgba(21, 241, 230, 0.966);
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    cursor: pointer;    
+    transition: transform .4s ease-in-out;
+    &:hover{
+        transform: scale(1.2);
+        color: rgba(40, 248, 248, 0.993);
+    }
+}
