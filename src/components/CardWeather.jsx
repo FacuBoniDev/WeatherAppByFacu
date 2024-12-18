@@ -12,6 +12,7 @@ export function IconWeather({ state }) {
     if (state === 'Wind') return <FaWind className='icon' />;
     if (state === 'Mist') return <BsFillCloudsFill className='icon' color='gray' />;
     if (state === 'Fog') return <BsFillCloudsFill className='icon' color='gray' />;
+    if (state === 'Haze') return <BsFillCloudsFill className='icon' color='gray' />;
     return <FaSun className='icon' color='orange' />;
 }
 
@@ -19,14 +20,24 @@ function TranslateWeatherState(estado) {
     const translations = {
         Clear: 'Despejado',
         Clouds: 'Nublado',
-        Rain: 'Lloviendo',
+        Rain: 'Lluvia',
         Snow: 'Nevando',
         Wind: 'Fuerte Viento',
         Mist: 'Neblina',
-        Fog: 'Neblina'
+        Fog: 'Neblina',
+        Haze: 'Bruma',
+        Drizzle: 'Llovizna',
+        Thunderstorm: 'Tormenta eléctrica',
+        Smoke: 'Humo',
+        Dust: 'Polvo',
+        Sand: 'Tormenta de arena',
+        Ash: 'Ceniza volcánica',
+        Squall: 'Chubasco',
+        Tornado: 'Tornado'
     };
     return translations[estado] || estado;
 }
+
 
 export function CardWeather({ data, dataTime }) {
     const [temp, setTemp] = useState(data.main.temp);
