@@ -8,6 +8,9 @@ import { useState, useEffect } from 'react';
 export function IconWeather({ state }) {
     if (state === 'Clouds') return <FaCloud className='icon' color='gray' />;
     if (state === 'Rain') return <FaCloudShowersHeavy className='icon' color='skyblue' />;
+    if (state === 'Thunderstorm') return <FaCloudShowersHeavy className='icon' color='skyblue' />;
+    if (state === 'Drizzle') return <FaCloudShowersHeavy className='icon' color='skyblue' />;
+    if (state === 'Squall') return <FaCloudShowersHeavy className='icon' color='skyblue' />;
     if (state === 'Snow') return <FaRegSnowflake className='icon' color='white' />;
     if (state === 'Wind') return <FaWind className='icon' />;
     if (state === 'Mist') return <BsFillCloudsFill className='icon' color='gray' />;
@@ -23,9 +26,9 @@ function TranslateWeatherState(estado) {
         Rain: 'Lluvia',
         Snow: 'Nevando',
         Wind: 'Fuerte Viento',
-        Mist: 'Neblina',
+        Mist: 'Bruma',
         Fog: 'Neblina',
-        Haze: 'Bruma',
+        Haze: 'Niebla',
         Drizzle: 'Llovizna',
         Thunderstorm: 'Tormenta eléctrica',
         Smoke: 'Humo',
@@ -37,7 +40,6 @@ function TranslateWeatherState(estado) {
     };
     return translations[estado] || estado;
 }
-
 
 export function CardWeather({ data, dataTime }) {
     const [temp, setTemp] = useState(data.main.temp);
