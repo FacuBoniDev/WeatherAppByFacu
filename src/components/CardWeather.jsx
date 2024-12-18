@@ -72,11 +72,12 @@ export function CardWeather({ data, dataTime }) {
             <section className='dataNoImportante'>                
                 <h3 className='horario'>{dataTime ? dataTime.formatted.split(' ')[1].split(':').slice(0,2).join(':') + ' hs' : "Cargando hora..."}</h3>
                 <p>
-                {dataTime && 
+                {dataTime ?
                     (dataTime.formatted.split(' ')[1].split(':').slice(0, 1)[0] >= 20 || 
                     dataTime.formatted.split(' ')[1].split(':').slice(0, 1)[0] <= 5) 
                     ? <><FaStar className='estrellaNoche1'/> <FaStar className='estrellaNoche2'/> <FaStar className='estrellaNoche3'/> <FaMoon className='lunita'/> </>
                     : <><FaSun className='solDia'/><FaCloud className='nubeDia'/></>
+                    : ''
                 }
                 </p>
                 <p><TbWorld color='aqua' />  País: {dataTime ? dataTime.countryName : " "}</p>
