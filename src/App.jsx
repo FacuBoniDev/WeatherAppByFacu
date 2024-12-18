@@ -24,7 +24,7 @@ function App() {
 
       if (response.ok) {
         setData(json);
-        console.log("Datos de OpenWeather:", json);
+        console.log("OK");
       } else {
         console.error("Error en la API de OpenWeather:", json.message);
       }
@@ -44,7 +44,7 @@ function App() {
 
         if (responseTime.ok) {
           setDataTime(jsonTime);
-          console.log("Datos de TimezoneDB:", jsonTime);
+          console.log("OK");
         } else {
           console.error("Error en la API de TimezoneDB:", jsonTime.message);
         }
